@@ -53,4 +53,10 @@ class BankController < ApplicationController
         redirect_to banks_path, notice: 'Bank destroyed!'
     end
 
+    private
+
+    def bank_params
+        params.require(:bank).permit(:name, )
+    end
+
 end
