@@ -1,12 +1,12 @@
 class BankController < ApplicationController
     def index
-        banks = Bank.where(user: current_user)
+        @banks = Bank.all
 
-        @banks = banks.sort_by (name: :asc)
+        # @banks = banks.sort_by (name)
     end
 
     def show
-        @bank = Bank.find(params[:id])
+        @banks = Bank.find(params[:id])
     end
 
     def new
@@ -56,7 +56,7 @@ class BankController < ApplicationController
     private
 
     def bank_params
-        params.require(:bank).permit(:name, )
+        params.require(:bank).permit(:name, :code, :address)
     end
 
 end
