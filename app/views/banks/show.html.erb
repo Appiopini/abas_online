@@ -1,16 +1,16 @@
 
 <div class="row justify-content-center">
   <div class="col-md-6">
-    <h1><%= @bank.name %></h1>
+    <h1><%= @bank.banco %></h1>
     <table class="table table-bordered">
       <tbody>
         <tr>
-          <th scope="row">Bank Address</th>
-          <td><%= @bank.address %></td>
+          <th scope="row">Agencia</th>
+          <td><%= @bank.agencia %></td>
         </tr>
         <tr>
-          <th scope="row">Bank Code</th>
-          <td><%= @bank.code %></td>
+          <th scope="row">Conta</th>
+          <td><%= @bank.conta %></td>
         </tr>
       </tbody>
         <%= link_to root_path do %>
@@ -19,7 +19,7 @@
         <% end %>
 
         <%= link_to banks_path(@bank) do %>
-          <div class="btn btn-warning btn-sm"> All banks <i class="fas fa-edit"></i>
+          <div class="btn btn-warning btn-sm"> Todas as Contas <i class="fas fa-edit"></i>
           </div>
         <% end %>
       

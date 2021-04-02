@@ -1,5 +1,4 @@
 class Bank < ApplicationRecord
-    validates :name, :address, :code, presence: :true
+    validates :banco, :agencia, :conta, presence: :true
     has_many :user
-    has_many :account
 end
