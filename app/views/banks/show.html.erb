@@ -1,19 +1,38 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1><%= @bank.name %></h1>
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <th scope="row">Address</th>
-            <td><%= @bank.address %></td>
-          </tr>
-          <tr>
-            <th scope="row">Coder</th>
-            <td><%= @bank.code %></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h1><%= @bank.name %></h1>
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <th scope="row">Bank Address</th>
+          <td><%= @bank.address %></td>
+        </tr>
+        <tr>
+          <th scope="row">Bank Code</th>
+          <td><%= @bank.code %></td>
+        </tr>
+      </tbody>
+        <%= link_to root_path do %>
+          <div class="btn btn-success btn-sm"> Home <i class="fas fa-home"></i>
+          </div>
+        <% end %>
+
+        <%= link_to banks_path(@bank) do %>
+          <div class="btn btn-warning btn-sm"> All banks <i class="fas fa-edit"></i>
+          </div>
+        <% end %>
+      
+        <%= link_to edit_bank_path(@bank) do %>
+          <div class="btn btn-warning btn-sm"> Edit <i class="fas fa-edit"></i>
+          </div>
+        <% end %>
+
+        <%= link_to bank_path(@bank), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <div class="btn btn-danger btn-sm"> Delete <i class="fas fa-trash"></i>
+          </div>
+        <% end %>
+    </table>
   </div>
 </div>
+

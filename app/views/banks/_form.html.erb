@@ -1,0 +1,6 @@
+<%= simple_form_for bank do |f| %>
+  <%= f.input :name, label: 'Bank Name' %>
+  <%= f.input :address, label: 'Address' %>
+  <%= f.input :code, label: 'Bank Code' %>
+  <%= f.submit class: 'btn btn-primary btn-sm' %>
+<% end %>

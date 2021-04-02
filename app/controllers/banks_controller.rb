@@ -5,7 +5,7 @@ class BanksController < ApplicationController
 
   def show
     @bank = Bank.find(params[:id])
-    @account = Account.new
+    # @account = Account.new
   end
 
   def new
@@ -23,7 +23,6 @@ class BanksController < ApplicationController
 
   def edit
     @bank = Bank.find(params[:id])
-    redirect_to root_path, notice: 'Not Allowed to Edit !'
   end
 
   def update
@@ -41,7 +40,7 @@ class BanksController < ApplicationController
     @bank = Bank.find(params[:id])
     # redirect_to root_path, notice: 'Not allowed to Delete 😠'
     # authorize @bank
-    @bank.update(remove: true)
+    @bank.destroy
     redirect_to banks_path, notice: 'Bank destroyed!'
   end
 

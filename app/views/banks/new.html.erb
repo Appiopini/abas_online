@@ -1,12 +1,12 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
       <h1>Create a new bank</h1>
-      <%= simple_form_for @bank do |f| %>
-        <%= f.input :name %>
-        <%= f.input :code %>
-        <%= f.input :address %>
-        <%= f.submit class: 'btn btn-primary' %>
+        <%= render 'form', bank: @bank %>
+      <p> </p>
+      <%= link_to banks_path(@bank) do %>
+        <div class="btn btn-warning btn-sm"> All banks <i class="fas fa-edit"></i>
+        </div>
       <% end %>
     </div>
   </div>
