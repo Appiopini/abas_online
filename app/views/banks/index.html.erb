@@ -1,0 +1,13 @@
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h1>All banks</h1>
+    <ul class="list-group">
+      <% @banks.each do |bank| %>
+        <li class="list-group-item">
+          <%= link_to bank.name, bank_path(bank) %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to "Add a new Bank", new_bank_path, class: 'btn btn-primary' %>
+  </div>
+</div>

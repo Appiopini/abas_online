@@ -1,2 +1,7 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<%= link_to banks_path(@bank) do %>
+  <div class="btn btn-warning btn-sm"> All banks <i class="fas fa-edit"></i>
+  </div>
+<% end %>
