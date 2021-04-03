@@ -1,0 +1,10 @@
+<form action="brasils" method="get">
+  <input type="text" name="bank_code">
+  <input type=submit>
+</form>
+
+ <% @bank_list.each do |bank| %>
+        <li class="list-group-item">
+          <%= bank["name"] %>
+        </li>
+      <% end %>

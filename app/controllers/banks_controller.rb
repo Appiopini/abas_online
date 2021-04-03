@@ -1,4 +1,5 @@
 class BanksController < ApplicationController
+
   def index
     @banks = Bank.all
   end
@@ -47,7 +48,7 @@ class BanksController < ApplicationController
   private
 
   def bank_params
-      params.require(:bank).permit(:banco, :conta, :agencia)
+    params.require(:bank).permit(:banco, :conta, :agencia)
   end
 
 end
