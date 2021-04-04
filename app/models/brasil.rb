@@ -1,3 +1,3 @@
 class Brasil < ApplicationRecord
-  has_many :name
+  has_many :name, :code
 end
