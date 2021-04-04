@@ -1,14 +1,15 @@
-<form action="brasils" method="get">
+<%= link_to root_path do %>
+  <div class="btn btn-success btn-sm"> Home <i class="fas fa-home"></i>
+  </div>
+<% end %>
+<p></p>
+<form action="brasils" method="get">Busque o Banco pelo codigo
   <input type="text" name="bank_code">
   <input type=submit>
 </form>
-
+<p></p>
  <% @bank_list.each do |bank| %>
         <li class="list-group-item">
           <%= bank["name"] %>
         </li>
       <% end %>
-<%= link_to root_path do %>
-  <div class="btn btn-success btn-sm"> Home <i class="fas fa-home"></i>
-  </div>
-<% end %>
