@@ -19,7 +19,7 @@ class BrasilsController < ApplicationController
   end
 
   def show
-    @brasil = params[:name]
+    @brasil = params[:code, :name]
     response = HTTParty.get('https://brasilapi.com.br/api/banks/v1')
 
     @responses = response.body

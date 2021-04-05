@@ -3,9 +3,14 @@
   </div>
 <% end %>
 
+<%= link_to new_bank_path do %>
+  <div class="btn btn-success btn-sm">Cadastrar Conta
+  </div>
+<% end %>
+
+
 <% @responses.each do |response| %>
         <li class="list-group-item">
           <%= response.body %>
         </li>
       <% end %>
-

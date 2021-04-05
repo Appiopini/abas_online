@@ -3,10 +3,14 @@
     <div class="col-md-6">
       <h1>Cadastrar Conta</h1>
         <%= render 'form', bank: @bank %>
-        <%= link_to banks_path(@bank, ) do %>
+        <%= link_to banks_path(@bank) do %>
       <p> </p>
           <div class="btn btn-warning btn-sm"> Todas as Contas <i class="fas fa-edit"></i>
           </div>
+          <%= link_to brasils_path do %>
+            <div class="btn btn-success btn-sm">Lista de bancos
+            </div>
+          <% end %>
         <% end %>
     </div>
   </div>

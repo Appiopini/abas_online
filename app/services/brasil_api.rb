@@ -7,7 +7,7 @@ class BrasilApi
 
   end
 
-  def self.bank(code fullname)
+  def self.bank(code)
 
     HTTParty.get("https://brasilapi.com.br/api/banks/v1/#{code}")
 
