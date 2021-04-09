@@ -6,7 +6,6 @@
       <th><% @banks.each do |bank| %></th>
         <tr>
           <th><%= link_to bank.banco, bank_path(bank), class: 'btn btn-primary' %></th>
-          <th> - Código <%= bank.code %></th>
           <th> - Agencia <%= bank.agencia %></th>
           <th> - Conta <%= bank.conta %></th>
         </tr>
