@@ -48,7 +48,7 @@ class BanksController < ApplicationController
   private
 
   def bank_params
-    params.require(:bank).permit(:banco, :conta, :agencia, :code)
+    params.require(:bank).permit(:banco, :conta, :agencia)
   end
 
 end
